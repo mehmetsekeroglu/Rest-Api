@@ -7,11 +7,11 @@ router.get("/", (req, res)=>{
 })
 
 router.post("/", (req, res) =>{
-    let newMovie = req.body;
-let movie = data.find(movie=>movie.id === parseInt(newMowie.movieId))
+    let rentedMovie = req.body;
+let movie = data.find(movie=>movie.id === parseInt(rentedMovie.movieId))
 if(movie){
-    rent.push(newMovie);
-    res.status(200).json(newMovie)
+    rent.push(rentedMovie);
+    res.status(200).json(rentedMovie)
 }else{
     res.status(404).json({errorMessage: "Film Yok"})
 }
